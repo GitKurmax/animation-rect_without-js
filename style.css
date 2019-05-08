@@ -1,0 +1,138 @@
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.outer {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  position: relative;
+}
+
+.inner {
+  color: #fff;
+  background: green;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  animation:
+    moveCircle 3s linear forwards,
+    rotate1 1s linear 3s forwards,
+    moveCircle2 3s linear 4s forwards,
+    rotate2 1s linear 7s forwards,
+    moveCircle3 3s linear 8s forwards,
+    rotate3 1s linear 11s forwards,
+    moveCircle4 3s linear 12s forwards,
+    rotate4 1s linear 15s forwards;
+  transform-origin: bottom center;
+}
+
+.cross {
+  animation: 
+    rotateCircle 1s linear 3,
+    rotateCircle 1s linear 4s 3,
+    rotateCircle 1s linear 8s 3,
+    rotateCircle 1s linear 12s 3;
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveCircle {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 190px;
+  }
+}
+
+@keyframes moveCircle2 {
+  from {
+    top: -20px;
+  }
+   
+  to {
+    top: 180px;
+  }
+}
+
+@keyframes moveCircle3 {
+  from {
+    left: 190px;
+  }
+   
+  to {
+    left: -10px;
+  }
+}
+
+@keyframes moveCircle4 {
+  from {
+    top: 180px;
+  }
+   
+  to {
+    top: -20px;
+  }
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(90deg);
+    
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotate(270deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
